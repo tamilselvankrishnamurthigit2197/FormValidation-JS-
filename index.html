@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+    <title>Form Validation</title>
+
+</head>
+<body>
+    <div class="container">
+        <form>
+            <i class="fa-solid fa-paper-plane"></i>
+
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="Enter Your Name" id="contact-name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone no.</label>
+                <input type="tel" placeholder="Enter Your Number" id="contact-phone" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Id</label>
+                <input type="email" placeholder="Enter Your Email" id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="message">Your Message</label>
+                <textarea id="contact-message" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+            </div>
+
+            <button onclick="return validateForm()"> Submit</button>
+            <span id="submit-error"></span>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
